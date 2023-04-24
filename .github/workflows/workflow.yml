@@ -1,10 +1,11 @@
 name: CI
 
 on:
-push:
+  push:
     branches: [ "main" ]
-  pull_request:
+pull_request:
     branches: [ "main" ]
+    
   
 workflow_dispatch:
 
@@ -18,7 +19,8 @@ jobs:
      - name: executando docker
        run: docker run docker/whalesay cowsay
        
-      - name: Run a multi-line script
+     - name: Run a multi-line script
         run:
-            echo Add other action to build,
-            echo test, and deploy your project.
+          echo Add other actions to build,
+          echo test, and deploy your project.
+      
